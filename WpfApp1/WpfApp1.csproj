@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bc639ba5-eef5-4217-85db-7c2919f7b7a2.jpg" />
+    <None Remove="download.jpg" />
+    <None Remove="images %281%29.jpg" />
+    <None Remove="images %281%29.png" />
+    <None Remove="images %282%29.jpg" />
+    <None Remove="images %283%29.jpg" />
+    <None Remove="images %284%29.jpg" />
+    <None Remove="images %285%29.jpg" />
+    <None Remove="images %286%29.jpg" />
+    <None Remove="images %287%29.jpg" />
+    <None Remove="images.jpg" />
+    <None Remove="images.png" />
+    <None Remove="reg.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="bc639ba5-eef5-4217-85db-7c2919f7b7a2.jpg" />
+    <Resource Include="download.jpg" />
+    <Resource Include="images (1).jpg" />
+    <Resource Include="images (1).png" />
+    <Resource Include="images (2).jpg" />
+    <Resource Include="images (3).jpg" />
+    <Resource Include="images (4).jpg" />
+    <Resource Include="images (5).jpg" />
+    <Resource Include="images (6).jpg" />
+    <Resource Include="images (7).jpg" />
+    <Resource Include="images.jpg" />
+    <Resource Include="images.png" />
+    <Resource Include="reg.jpg" />
+  </ItemGroup>
+
+</Project>

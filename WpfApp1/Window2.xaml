@@ -1,0 +1,67 @@
+﻿<Window x:Class="WpfApp1.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Window2" Height="797" Width="567">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/images (7).jpg"/>
+        </Grid.Background>
+        <Label Content=" By Mobile" HorizontalAlignment="Left" Margin="77,71,0,0" VerticalAlignment="Top" Height="64" Width="109" FontSize="18" RenderTransformOrigin="-0.901,-0.981"/>
+        <Label Content=" By Email_Id" HorizontalAlignment="Left" Margin="382,71,0,0" VerticalAlignment="Top" Height="64" Width="109" FontSize="18" RenderTransformOrigin="-0.901,-0.981"/>
+        <Label Content="Enter No." HorizontalAlignment="Left" Margin="22,173,0,0" VerticalAlignment="Top" Height="64" Width="115" FontSize="18" RenderTransformOrigin="-0.901,-0.981"/>
+        <Label Content="Enter OTP" HorizontalAlignment="Left" Margin="23,237,0,0" VerticalAlignment="Top" Height="64" Width="109" FontSize="18" RenderTransformOrigin="-0.901,-0.981"/>
+        <Label Content="Resend OTP" HorizontalAlignment="Left" Margin="110,309,0,0" VerticalAlignment="Top" Height="64" Width="109" FontSize="18" RenderTransformOrigin="-0.901,-0.981"/>
+        <Label Content="Enter Email" HorizontalAlignment="Left" Margin="284,173,0,0" VerticalAlignment="Top" Height="64" Width="109" FontSize="18" RenderTransformOrigin="-0.901,-0.981"/>
+        <Label Content="Enter OTP" HorizontalAlignment="Left" Margin="284,237,0,0" VerticalAlignment="Top" Height="64" Width="109" FontSize="18" RenderTransformOrigin="-0.901,-0.981"/>
+        <Label Content="Resend OTP" HorizontalAlignment="Left" Margin="382,301,0,0" VerticalAlignment="Top" Height="64" Width="109" FontSize="18" RenderTransformOrigin="-0.901,-0.981"/>
+        <TextBox HorizontalAlignment="Left" Margin="132,173,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="32"/>
+        <TextBox HorizontalAlignment="Left" Margin="137,237,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="32"/>
+        <TextBox HorizontalAlignment="Left" Margin="398,173,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="32"/>
+        <TextBox HorizontalAlignment="Left" Margin="398,237,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="32"/>
+        <Button Content="Verify OTP" HorizontalAlignment="Left" Margin="137,488,0,0" VerticalAlignment="Top" Height="45" Width="120" RenderTransformOrigin="-0.094,0.304" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF009CFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="338,493,0,0" VerticalAlignment="Top" Height="45" Width="120" RenderTransformOrigin="-0.094,0.304" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF0091FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button Content="Verify OTP" HorizontalAlignment="Left" VerticalAlignment="Top" Height="45" Width="120" RenderTransformOrigin="-0.094,0.304" Foreground="White">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF009CFF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Button>
+        <Button Content="Generate OTP" HorizontalAlignment="Left" Margin="132,391,0,0" VerticalAlignment="Top" Height="45" Width="120" RenderTransformOrigin="-0.094,0.304" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF009CFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Generate OTP" HorizontalAlignment="Left" Margin="338,391,0,0" VerticalAlignment="Top" Height="45" Width="120" RenderTransformOrigin="-0.094,0.304" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF009CFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
