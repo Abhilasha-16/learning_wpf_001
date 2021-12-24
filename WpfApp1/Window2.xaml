@@ -18,7 +18,7 @@
         <Label Content="Enter Email" HorizontalAlignment="Left" Margin="284,173,0,0" VerticalAlignment="Top" Height="64" Width="109" FontSize="18" RenderTransformOrigin="-0.901,-0.981"/>
         <Label Content="Enter OTP" HorizontalAlignment="Left" Margin="284,237,0,0" VerticalAlignment="Top" Height="64" Width="109" FontSize="18" RenderTransformOrigin="-0.901,-0.981"/>
         <Label Content="Resend OTP" HorizontalAlignment="Left" Margin="382,301,0,0" VerticalAlignment="Top" Height="64" Width="109" FontSize="18" RenderTransformOrigin="-0.901,-0.981"/>
-        <TextBox HorizontalAlignment="Left" Margin="132,173,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="32"/>
+        <TextBox HorizontalAlignment="Left" Margin="132,173,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="32" TextChanged="TextBox_TextChanged_1"/>
         <TextBox HorizontalAlignment="Left" Margin="137,237,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="32"/>
         <TextBox HorizontalAlignment="Left" Margin="398,173,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="32"/>
         <TextBox HorizontalAlignment="Left" Margin="398,237,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="32"/>
@@ -46,7 +46,7 @@
                 </Button.Background>
             </Button>
         </Button>
-        <Button Content="Generate OTP" HorizontalAlignment="Left" Margin="132,391,0,0" VerticalAlignment="Top" Height="45" Width="120" RenderTransformOrigin="-0.094,0.304" Foreground="White">
+        <Button Content="Generate OTP" HorizontalAlignment="Left" Margin="132,391,0,0" VerticalAlignment="Top" Height="45" Width="120" RenderTransformOrigin="-0.094,0.304" Foreground="White" Click="Button_Click_1">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -54,7 +54,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Generate OTP" HorizontalAlignment="Left" Margin="338,391,0,0" VerticalAlignment="Top" Height="45" Width="120" RenderTransformOrigin="-0.094,0.304" Foreground="White">
+        <Button Content="Generate OTP" HorizontalAlignment="Left" Margin="338,391,0,0" VerticalAlignment="Top" Height="45" Width="120" RenderTransformOrigin="-0.094,0.304" Foreground="White" Click="Button_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
