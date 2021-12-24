@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfApp1.Loginpage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Loginpage" Height="1954" Width="894">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="115*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="779*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Margin="81,124,81,63" Grid.ColumnSpan="3" >
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/images (7).jpg"/>
+            </StackPanel.Background>
+
+
+            <!--<! —For EmailId-->
+
+            <!--<! —For Password-->
+            <TextBox x:Name="txEmailId" Height="66" Width="354" />
+            <Label Target="{Binding ElementName=txtPassword}" Height="51" Width="84" RenderTransformOrigin="-0.249,3.459">
+                <StackPanel Orientation="Horizontal">
+
+                    <AccessText Text="_Password:" />
+                </StackPanel>
+            </Label>
+            <TextBlock Height="23" HorizontalAlignment="Left" x:Name ="errormessage" VerticalAlignment="Top" Width="247" Margin="110,25,0,0"  OpacityMask="Crimson" Foreground="#FFE5572C"  />
+            <Label Target="{Binding ElementName=txEmailId}" Height="38" Width="100" RenderTransformOrigin="-0.615,-1.04">
+                <StackPanel Orientation="Horizontal">
+
+                    <AccessText Text="_EmailId:" />
+                </StackPanel>
+            </Label>
+            <PasswordBox x:Name="txtPassword" PasswordChar="*" MaxLength="10" Height="61" Width="342" />
+            <Button Content="Login" Height="76" Width="208" Click="Button_Click" RenderTransformOrigin="1.002,4.33"/>
+        </StackPanel>
+
+
+    </Grid>
+
+</Window>

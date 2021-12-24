@@ -31,7 +31,10 @@ namespace WpfApp1
             InitializeComponent();
         }
 
-        private void btnRegister_Click(object sender, RoutedEventArgs e)
+       
+
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             lblmessage.Content = "";
 
@@ -45,6 +48,7 @@ namespace WpfApp1
                 txtemailid.Focus();
 
             }
+
             else if (!Regex.IsMatch(txtemailid.Text, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"))
             {
                 lblmessage.Visibility = System.Windows.Visibility.Visible;
@@ -96,7 +100,7 @@ namespace WpfApp1
                 else
                 {
 
-
+                    
                     if (rbGender.IsChecked == true)
                     {
                         gen = rbGender.Content.ToString();
@@ -105,18 +109,60 @@ namespace WpfApp1
                     {
                         gen = rbGender1.Content.ToString();
                     }
+                   
+                    lblmessage.Visibility = System.Windows.Visibility.Visible;
+                    lblmessage.Foreground = Brushes.Green;
+                    lblmessage.Content = "Registration Successfully ";
                 }
             }
         }
+        // Resert all control
+        private void btnReset_Click(object sender, RoutedEventArgs e)
+        {
+            ResetAllClear();
+        }
 
-        private static void btnBack_Click(object sender, RoutedEventArgs e)
+        private void ResetAllClear()
+        {
+            foreach (UIElement ui in ChildGrid.Children)
+            {
+                if (ui is TextBox)
+                {
+                    TextBox tt = (TextBox)ui;
+                    tt.Text = "";
+                }
+                if (ui is PasswordBox)
+                {
+                    PasswordBox pp = (PasswordBox)ui;
+                    pp.Password = "";
+                }
+
+            }
+            foreach (UIElement ui in stackCheckBox.Children)
+            {
+                if (ui.GetType() == typeof(CheckBox))
+                {
+                    CheckBox chk = (CheckBox)ui;
+                    chk.IsChecked = false;
+                }
+            }
+            
+        }
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btnReset_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MainWindow min = new MainWindow();
+            min.Show();
+        }
+
+        private void txtaddress_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
     }
 }
+

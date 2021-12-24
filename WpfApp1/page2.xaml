@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="page2" Height="521" Width="402">
+        Title="page2" Height="580" Width="498">
+    <Window.Background>
+        <ImageBrush ImageSource="/images (7).jpg"/>
+    </Window.Background>
 
-    <Grid Width="400" Height="500" Background="PaleGoldenrod" Name="ChildGrid">
+    <Grid Width="400" Height="500" Name="ChildGrid">
+        <Grid.Background>
+            <ImageBrush ImageSource="/images (4).jpg"/>
+        </Grid.Background>
         <!--No of Rows in Grid Panel-->
         <Grid.RowDefinitions>
             <RowDefinition Height="35"></RowDefinition>
@@ -35,7 +41,7 @@
         <Label Grid.Row="5" Grid.Column="0" Content="Confirm Password" Padding="30,10,10,3"></Label>
         <Label Grid.Row="8" Grid.Column="0" Content="Contact_No" Padding="30,10,10,3"></Label>
 
-        <Label Grid.Row="10" Grid.ColumnSpan="2"  Padding="30,10,10,3" Margin="0,7,0,0"></Label>
+        <Label Grid.Row="10" Grid.ColumnSpan="2"  Padding="30,10,10,3" Height="28" VerticalAlignment="Bottom"/>
         <!--Margin left-top,right,bottom-->
         <TextBox Grid.Row="1" Grid.Column="1" Margin="10,4,10,4" Padding="2,2,2,2" Name="txtUserName"></TextBox>
         <!-- Radio Button-->
@@ -47,13 +53,11 @@
         <PasswordBox Grid.Row="5" Grid.Column="1" Margin="10,4,10,4" Padding="2,2,2,2" MaxLength="25"  Name="txtcpassword" PasswordChar="*"></PasswordBox>
         <StackPanel Grid.Row="6" Grid.Column="1" Name="stackCheckBox"/>
         <!--ComboBox-->
-        <TextBox Grid.Row="8" Grid.Column="1" Name="txtaddress" Margin="10,4,10,71" Padding="2,2,2,2" ></TextBox>
-        <Button  Grid.Row="9" Content="Register" Height="23"  Width="70" Margin="15,7,165,5" x:Name="btnRgister" Click="btnSubmit_Click" Grid.Column="1" />
-
-        <Button Grid.Row="9" Content="Reset" Margin="94,7,86,0" Name="btnReset"  Width="70" Click="btnReset_Click" Grid.Column="1" Height="23" VerticalAlignment="Top" />
-
-        <Button Grid.Row="9" Content="Back" Height="23"  Margin="170,7,10,5" x:Name="btnBack" Width="70" Click="btnCancel_Click" Grid.Column="1" />
+        <TextBox Grid.Row="8" Grid.Column="1" Name="txtaddress" Margin="10,4,10,71" Padding="2,2,2,2" TextChanged="txtaddress_TextChanged" ></TextBox>
         <Label Content="Label"  Grid.Row="10" Height="28" HorizontalAlignment="Left" Margin="45,7,0,0" Name="lblmessage" Visibility="Hidden" VerticalAlignment="Top" />
+        <Button Content="Register" HorizontalAlignment="Center" Grid.Row="9" Width="66" RenderTransformOrigin="-0.195,0.357" Click="Button_Click"/>
+        <Button Content="Reset" HorizontalAlignment="Left" Grid.Row="8" VerticalAlignment="Bottom" Width="80" Height="45" RenderTransformOrigin="-0.195,0.357" Grid.Column="1" Margin="10,0,0,30" Grid.RowSpan="3" Click="Button_Click_1"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="125,0,0,0" Grid.Row="9" Width="75" RenderTransformOrigin="-0.195,0.357" Grid.Column="1" Click="Button_Click_2"/>
     </Grid>
 
 
