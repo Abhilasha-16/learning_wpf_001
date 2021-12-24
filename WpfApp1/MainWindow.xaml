@@ -9,7 +9,7 @@
     <Window.Resources>
         <SolidColorBrush x:Key="ButtonForeground1" Color="Black"/>
     </Window.Resources>
-    <Grid>
+    <Grid HorizontalAlignment="Right" Width="477">
         <Grid.Background>
             <ImageBrush ImageSource="/images (7).jpg"/>
         </Grid.Background>
@@ -34,7 +34,7 @@
             </Button.Background>
         </Button>
         <Border HorizontalAlignment="Left" Margin="92,106,0,0" VerticalAlignment="Top" Height="52" Width="120" >
-            <Button Content="Sign UP " HorizontalAlignment="Center" Width="120" RenderTransformOrigin="-0.034,-4.386" Click="Button_Click" FontWeight="ExtraLight" Foreground="White" FontSize="18" Margin="0,0,0,-2">
+            <Button Content="Sign UP " HorizontalAlignment="Center" Width="120" RenderTransformOrigin="-0.034,-4.386" Click="Button_Click" FontWeight="ExtraLight" Foreground="White" FontSize="18" Height="54" VerticalAlignment="Top">
                 <Button.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black"/>

@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfApp1.page2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="page2" Height="521" Width="402">
+
+    <Grid Width="400" Height="500" Background="PaleGoldenrod" Name="ChildGrid">
+        <!--No of Rows in Grid Panel-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="50*" />
+        </Grid.RowDefinitions>
+        <!--No of columns in Grid Panel-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="1" Grid.Column="0" Content="Name" Padding="30,10,10,3"></Label>
+        <Label Grid.Row="2" Grid.Column="0" Content="Gender" Padding="30,10,10,3"></Label>
+        <Label Grid.Row="3" Grid.Column="0" Content="EmailId" Padding="30,10,10,3"></Label>
+        <Label Grid.Row="4" Grid.Column="0" Content="Password" Padding="30,10,10,3"></Label>
+        <Label Grid.Row="5" Grid.Column="0" Content="Confirm Password" Padding="30,10,10,3"></Label>
+        <Label Grid.Row="8" Grid.Column="0" Content="Contact_No" Padding="30,10,10,3"></Label>
+
+        <Label Grid.Row="10" Grid.ColumnSpan="2"  Padding="30,10,10,3" Margin="0,7,0,0"></Label>
+        <!--Margin left-top,right,bottom-->
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="10,4,10,4" Padding="2,2,2,2" Name="txtUserName"></TextBox>
+        <!-- Radio Button-->
+        <RadioButton Name="rbGender" Grid.Row="2" Grid.Column="1" GroupName="Gender" Content="Male" Margin="15,7,50,7" IsChecked="True"></RadioButton>
+        <RadioButton Name="rbGender1" Grid.Row="2" Grid.Column="1" GroupName="Gender" Content="Female" Margin="70,7,10,7"></RadioButton>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="10,4,10,4" Padding="2,2,2,2" Name="txtemailid"></TextBox>
+        <!--Password Field-->
+        <PasswordBox Grid.Row="4" Grid.Column="1" Margin="10,4,10,4" Padding="2,2,2,2" MaxLength="25"  Name="txtpassword" PasswordChar="*"></PasswordBox>
+        <PasswordBox Grid.Row="5" Grid.Column="1" Margin="10,4,10,4" Padding="2,2,2,2" MaxLength="25"  Name="txtcpassword" PasswordChar="*"></PasswordBox>
+        <StackPanel Grid.Row="6" Grid.Column="1" Name="stackCheckBox"/>
+        <!--ComboBox-->
+        <TextBox Grid.Row="8" Grid.Column="1" Name="txtaddress" Margin="10,4,10,71" Padding="2,2,2,2" ></TextBox>
+        <Button  Grid.Row="9" Content="Register" Height="23"  Width="70" Margin="15,7,165,5" x:Name="btnRgister" Click="btnSubmit_Click" Grid.Column="1" />
+
+        <Button Grid.Row="9" Content="Reset" Height="23" Margin="94,7,86,0" Name="btnReset"  Width="70" Click="btnReset_Click" Grid.Column="1" VerticalAlignment="Top" />
+
+        <Button Grid.Row="9" Content="Back" Height="23"  Margin="170,7,10,5" x:Name="btnBack" Width="70" Click="btnCancel_Click" Grid.Column="1" />
+        <Label Content="Label"  Grid.Row="10" Height="28" HorizontalAlignment="Left" Margin="45,7,0,0" Name="lblmessage" Visibility="Hidden" VerticalAlignment="Top" />
+    </Grid>
+
+
+</Window>
