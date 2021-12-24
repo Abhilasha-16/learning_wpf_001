@@ -31,76 +31,57 @@ namespace WpfApp1
             throw new NotImplementedException();
         }
 
-        WelComePage wc = new WelComePage();
-        private object txtPassword;
+     
+        private readonly object txtEmailId;
+        private object errormessage;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (txtEmailId.Text.Length != 0)
-            {
-                if (!Regex.IsMatch((string)txtEmailId.Text, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"))
-                {
-
-                    errormessage.Text = "Enter a valid email.";
-
-                    txtEmailId.Select(0, txtEmailId.Text.Length);
-
-                    txtEmailId.Focus();
-
-                }
-
-                else
-                {
-
-                    string email = (string)txtEmailId.Text;
-
-                    string password = txtPassword.Text;
-
-                    SqlConnection con = new SqlConnection("Data Source=INDIA11;Initial Catalog=WpfTest;Integrated Security=True");
-
-                    con.Open();
-
-                    SqlCommand cmd = new SqlCommand("select * from User_Registration where EmailId='" + email + "'  and Password='" + password + "'", con);
-
-                    cmd.CommandType = CommandType.Text;
-
-                    SqlDataAdapter da = new SqlDataAdapter
-                    {
-                        SelectCommand = cmd
-                    };
-
-                    DataSet ds = new DataSet();
-
-                    da.Fill(ds);
-
-                    if (ds.Tables[0].Rows.Count > 0)
-                    {
-                        wc.tbname.Text = ds.Tables[0].Rows[0]["Name"].ToString();
-                        wc.tbgender.Text = ds.Tables[0].Rows[0]["Gender"].ToString();
-                        wc.tbemailid.Text = ds.Tables[0].Rows[0]["EmailId"].ToString();
-
-                        /* wc.tbcontact.Text = ds.Tables[0].Rows[0]["Contact"].To();*/
-
-                        wc.Show();
-                        Close();
-
-                    }
-
-                    else
-                    {
-                        errormessage.Text = "Sorry! Please enter existing emailid/password.";
-
-                    }
-
-                    con.Close();
-
-                }
-            }
-            else
+            if (txtEmailId.Text.Length == 0)
             {
                 errormessage.Text = "Enter an EmailId";
 
                 txtEmailId.Focus();
+
+            }
+
+            else if (!Regex.IsMatch(txtEmailId.Text, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"))
+            {
+
+                errormessage.Text = "Enter a valid email.";
+
+                txtEmailId.Select(0, txtEmailId.Text.Length);
+
+                txtEmailId.Focus();
+
+            }
+
+            else
+            {
+
+                string email = txtEmailId.Text;
+
+                string password = txtPassword.Password;
+
+                SqlConnection con = new SqlConnection("Data Source=INDIA11;Initial Catalog=WpfTest;Integrated Security=True");
+
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand("select * from User_Registration where EmailId='" + email + "'  and Password='" + password + "'", con);
+
+                cmd.CommandType = CommandType.Text;
+
+                SqlDataAdapter da = new SqlDataAdapter();
+
+                da.SelectCommand = cmd;
+
+                DataSet ds = new DataSet();
+
+                da.Fill(ds);
+
+              
+
+                con.Close();
 
             }
         }
@@ -112,37 +93,5 @@ namespace WpfApp1
         }
 
 
-    }
-
-   public class txtEmailId
-    {
-        public static object Text { get; internal set; }
-
-        internal static void Focus()
-        {
-            throw new NotImplementedException();
-        }
-
-        internal static void Select(int v, object length)
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-    public class errormessage
-    {
-        internal static string Text;
-    }
-
-    internal class WelComePage
-    {
-        internal object tbname;
-        internal object tbgender;
-        internal object tbemailid;
-
-        internal void Show()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

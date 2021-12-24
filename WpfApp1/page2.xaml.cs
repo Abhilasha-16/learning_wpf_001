@@ -25,13 +25,13 @@ namespace WpfApp1
     /// </summary>
     public partial class page2 : Window
     {
-        string gen, details, course;
-        public page2()
+        string gen; 
+           public page2()
         {
             InitializeComponent();
         }
 
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
             lblmessage.Content = "";
 
@@ -106,17 +106,17 @@ namespace WpfApp1
                         gen = rbGender1.Content.ToString();
                     }
                 }
-
-                private void btnReset_Click(object sender, RoutedEventArgs e)
-                {
-                    //ResetAllClear();
-                }
-
-                private void btnCancel_Click(object sender, RoutedEventArgs e)
-                {
-
-                }
             }
+        }
+
+        private static void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnReset_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
