@@ -23,6 +23,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="SQLite.Net-PCL" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="bc639ba5-eef5-4217-85db-7c2919f7b7a2.jpg" />
     <Resource Include="download.jpg" />
     <Resource Include="images (1).jpg" />
