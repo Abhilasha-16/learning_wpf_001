@@ -53,11 +53,12 @@
         <PasswordBox Grid.Row="5" Grid.Column="1" Margin="10,4,10,4" Padding="2,2,2,2" MaxLength="25"  Name="txtcpassword" PasswordChar="*"></PasswordBox>
         <StackPanel Grid.Row="6" Grid.Column="1" Name="stackCheckBox"/>
         <!--ComboBox-->
-        <TextBox Grid.Row="8" Grid.Column="1" Name="txtaddress" Margin="10,4,10,71" Padding="2,2,2,2" TextChanged="txtaddress_TextChanged" ></TextBox>
         <Label Content="Label"  Grid.Row="10" Height="28" HorizontalAlignment="Left" Margin="45,7,0,0" Name="lblmessage" Visibility="Hidden" VerticalAlignment="Top" />
         <Button Content="Register" HorizontalAlignment="Center" Grid.Row="9" Width="66" RenderTransformOrigin="-0.195,0.357" Click="Button_Click"/>
         <Button Content="Reset" HorizontalAlignment="Left" Grid.Row="8" VerticalAlignment="Bottom" Width="80" Height="45" RenderTransformOrigin="-0.195,0.357" Grid.Column="1" Margin="10,0,0,30" Grid.RowSpan="3" Click="Button_Click_1"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="125,0,0,0" Grid.Row="9" Width="75" RenderTransformOrigin="-0.195,0.357" Grid.Column="1" Click="Button_Click_2"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="0" Margin="266,222,0,0" Grid.Row="11" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="8" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="27" MaxLength="10"  />
     </Grid>
 
 

@@ -19,20 +19,6 @@
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Button Content="Sign IN" HorizontalAlignment="Right" Margin="0,104,73,0" VerticalAlignment="Top" Height="54" Width="120" RenderTransformOrigin="-0.034,-4.386" Click="Button_Click" Foreground="White" FontSize="16" FontWeight="Normal">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="White" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF0072FF" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
         <Border HorizontalAlignment="Left" Margin="92,106,0,0" VerticalAlignment="Top" Height="52" Width="120" >
             <Button Content="Sign UP " HorizontalAlignment="Center" Width="120" RenderTransformOrigin="-0.034,-4.386" Click="Button_Click" FontWeight="ExtraLight" Foreground="White" FontSize="18" Height="54" VerticalAlignment="Top">
                 <Button.BorderBrush>
@@ -49,6 +35,14 @@
                 </Button.Background>
             </Button>
         </Border>
+        <Button Content="Sign IN" HorizontalAlignment="Left" Margin="265,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.157,-6.39" Height="52" Width="119" FontSize="18" Foreground="White" Click="Button_Click_1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF0072FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 

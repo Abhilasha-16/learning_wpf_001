@@ -22,13 +22,7 @@
             <!--<! —For EmailId-->
 
             <!--<! —For Password-->
-            <TextBox x:Name="txEmailId" Height="66" Width="354" />
-            <Label Target="{Binding ElementName=txtPassword}" Height="51" Width="84" RenderTransformOrigin="-0.249,3.459">
-                <StackPanel Orientation="Horizontal">
-
-                    <AccessText Text="_Password:" />
-                </StackPanel>
-            </Label>
+            <!--<! —For Password-->
             <TextBlock Height="23" HorizontalAlignment="Left" x:Name ="errormessage" VerticalAlignment="Top" Width="247" Margin="110,25,0,0"  OpacityMask="Crimson" Foreground="#FFE5572C"  />
             <Label Target="{Binding ElementName=txEmailId}" Height="38" Width="100" RenderTransformOrigin="-0.615,-1.04">
                 <StackPanel Orientation="Horizontal">
@@ -36,8 +30,15 @@
                     <AccessText Text="_EmailId:" />
                 </StackPanel>
             </Label>
+            <TextBox x:Name="txEmailId" Height="66" Width="354" />
             <PasswordBox x:Name="txtPassword" PasswordChar="*" MaxLength="10" Height="61" Width="342" />
             <Button Content="Login" Height="76" Width="208" Click="Button_Click" RenderTransformOrigin="1.002,4.33"/>
+            <Label Target="{Binding ElementName=txtPassword}" Height="51" Width="84" RenderTransformOrigin="-0.249,3.459">
+                <StackPanel Orientation="Horizontal">
+
+                    <AccessText Text="_Password:" />
+                </StackPanel>
+            </Label>
         </StackPanel>
 
 

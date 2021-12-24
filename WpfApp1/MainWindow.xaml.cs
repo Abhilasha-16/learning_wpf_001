@@ -29,13 +29,14 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            page2 win = new page2();
-            win.Show();
+            page2 p1 = new page2();
+            p1.Show();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            
+            Loginpage L1 = new Loginpage();
+            L1.Show();
         }
     }
 }

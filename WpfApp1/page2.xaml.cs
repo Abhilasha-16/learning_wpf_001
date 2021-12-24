@@ -159,9 +159,11 @@ namespace WpfApp1
             min.Show();
         }
 
-        private void txtaddress_TextChanged(object sender, TextChangedEventArgs e)
-        {
+       
 
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
         }
     }
 }
