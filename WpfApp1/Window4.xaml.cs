@@ -56,15 +56,15 @@ namespace WpfApp1
 
                     string password = txtPassword.Text;
 
-                    SqlConnection con = new SqlConnection("Data Source=INDIA11;Initial Catalog=WpfTest;Integrated Security=True");
+                   // SqlConnection con = new SqlConnection("Data Source=INDIA11;Initial Catalog=WpfTest;Integrated Security=True");
 
                     con.Open();
 
-                    SqlCommand cmd = new SqlCommand("select * from User_Registration where EmailId='" + email + "'  and Password='" + password + "'", con);
+                  //  SqlCommand cmd = new SqlCommand("select * from User_Registration where EmailId='" + email + "'  and Password='" + password + "'", con);
 
                     cmd.CommandType = CommandType.Text;
 
-                    SqlDataAdapter da = new SqlDataAdapter
+                    //SqlDataAdapter da = new SqlDataAdapter
                     {
                         SelectCommand = cmd
                     };
